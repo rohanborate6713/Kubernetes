@@ -41,12 +41,11 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest
 sudo dpkg -i minikube_latest_amd64.deb
 ```
 - This command does the following:
-
-curl → A command-line tool to download files from the internet.
--L → Follows redirects (if the URL redirects to another link).
--O → Saves the downloaded file with the same name as in the URL.
-URL → https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb is the official Minikube package for Linux (amd64 architecture).
-The downloaded file will be saved as minikube_latest_amd64.deb in the current directory.
+    - `curl`  → A command-line tool to download files from the internet.
+    - `-L`  → Follows redirects (if the URL redirects to another link).
+    - `-O`  → Saves the downloaded file with the same name as in the URL.
+    - **URL** → `https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb`  is the official Minikube package for **Linux (amd64 architecture)**.
+    - The downloaded file will be saved as `**minikube_latest_amd64.deb**`  in the current directory.
 
 
 - Make it executable and move it into your path:
