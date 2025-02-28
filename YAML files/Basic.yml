@@ -1,0 +1,12 @@
+apiVersion: v1              #Specifies the API version being used. In this case, v1 is for core Kubernetes objects like Pods. 
+kind: Pod                   #Defines the type of resource to be created. Here, it specifies a Pod.
+metadata:                   #Contains metadata about the object, including: 
+    name: myapp-pod         #Assigns a unique name to the Pod.
+    labels:                 #Key-value pairs that help identify and group the Pod
+        app: myapp          #Indicates the application name.
+        type: front-end     #Categorizes it as a front-end component.
+
+spec:                          #Defines the specification of the Pod
+   containers:                 # A list of containers within the Pod,it can be List/Array
+      - name: nginx-container  #Defines a container named nginx-container ,  # (-) indicates that this is the first item in the List
+        image: nginx           #Specifies the container image to be used (nginx from Docker Hub)

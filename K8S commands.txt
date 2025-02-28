@@ -1,0 +1,16 @@
+## 
+
+create pod --> 
+kubectl run nginx --image=nginx
+
+to check available pod 
+kubectl get pods
+kubectl get pods -o wide --> get additional information
+
+
+ 
+
+kubectl create -f file.yml   --> to create pods from yml file
+kubectl get pods   --> check list of pods 
+kubectl describe pod <podname>   --> detailed information about pod
+kubectl delete pod <podname>     --> delete pod 
