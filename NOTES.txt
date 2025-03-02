@@ -1,0 +1,34 @@
+K8S services --> 
+
+enable communication between different component in and outside of the applcation
+helps us to connect our application with other applications
+
+let see we have application which containing different pods
+frontend
+backend
+database
+
+services helps with communicate frontend with users 
+and also
+communicate with other pods , backend and database , 
+
+basically it is loose coupling
+
+#######
+
+service is just like object
+
+node port service (range --> 30000 to 32767)
+
+serivie listen to the port and forward request to pod 
+service made internat port accessible on the node 
+
+if we dont provide node port , automatically ports allocated between range  (30000 -- 32767)
+
+cluste IP --
+creates a virtual Ip inside the cluster to enable communication between different services (frontend) , (backend)
+
+Load balancer --> 
+enable load balancer support for cloud provider
+
+
