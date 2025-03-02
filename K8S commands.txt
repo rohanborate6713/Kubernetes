@@ -14,3 +14,8 @@ kubectl create -f file.yml   --> to create pods from yml file
 kubectl get pods   --> check list of pods 
 kubectl describe pod <podname>   --> detailed information about pod
 kubectl delete pod <podname>     --> delete pod 
+
+#create a pod named as nginx
+kubectl run <pod name>--image=<image name>
+
+kubectl run nginx-pod --image=nginx
