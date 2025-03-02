@@ -31,4 +31,7 @@ creates a virtual Ip inside the cluster to enable communication between differen
 Load balancer --> 
 enable load balancer support for cloud provider
 
+selector --> 
+In Kubernetes YAML files, the selector field is used to match a set of resources based on labels.
+ It is commonly used in Deployments, Services, and ReplicaSets to link resources together.
 

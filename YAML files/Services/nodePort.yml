@@ -11,5 +11,5 @@ spec:
      nodePort: 3004
 
 selector: 
-    app: myapp           
+    app: myapp           ##labels section  from pod yml files
 
