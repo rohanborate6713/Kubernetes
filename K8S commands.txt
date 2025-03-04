@@ -18,6 +18,9 @@ kubectl delete pod <podname>     --> delete pod
 kubectl run <pod name>--image=<image name>
 kubectl run nginx-pod --image=nginx
 
+#log in into minikube cluster
+minikube ssh
+
 #create services 
 kubectl create -f <service yml file name>
 
