@@ -7,6 +7,12 @@ to check available pod
 kubectl get pods
 kubectl get pods -o wide --> get additional information
 
+#to get detailed informatiom of how we get information from above command
+how we can get pod IP address
+kubectl get pods -v=7
+
+
+
 
 
 kubectl create -f file.yml   --> to create pods from yml file
@@ -27,4 +33,49 @@ kubectl create -f <service yml file name>
 #get services
 kubectl get services
 
+----------------------------------------------------------------
+#kind installation 
 
+#to get the cluster information 
+kubectl cluster-info --context kind-my-kind-cluster
+kubectl cluster-info --context kind-<cluster_name>
+
+#get nodes
+kubectl get nodes
+
+#kuebctl default context set
+kubectl config use-context <cluster_name>
+
+#To watch commands output after some specific period
+watch get nodes 
+
+---------------------------------------------------------------
+#kubeadm 
+
+if you have bare metal machines , means separate machines for master node and worker node 
+kubeadm worker node works on 6443 port , i is required to connect worker to master
+
+---------------------------------------------------------------
+#namespaces --> 
+
+group of K8S resources combined together basically used for isolation between pods and their relative 
+K8S resources 
+
+#get the namespaces
+kubectl get namespaces / kubectl get ns
+
+we get 
+
+dafault -> default namespace for pods
+kube-system -> here we get K8s resources 
+
+#get pods from specific namespace
+kubectl get pods -n <namespace_name>
+
+#create namespace 
+kubectl create ns <namespace-name>
+
+#create pod in specific namespace
+kubectl run <container-name> --image=<image-name> -n <namespace-name>
+kubectl run nginx --image=nginx -n nginx
+------------------------------------------------------------------------------

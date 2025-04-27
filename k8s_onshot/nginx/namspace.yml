@@ -1,0 +1,7 @@
+#manifest file to create the namespace
+# This file is used to create a namespace for the nginx deployment
+
+kind: Namespace
+apiVersion: v1
+metadata:
+    name: nginx  
