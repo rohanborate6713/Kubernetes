@@ -1,0 +1,29 @@
+
+# This file contains the deployment configuration for an Nginx application in Kubernetes.
+# It defines the number of replicas, the selector for the pods, and the template for the pod specification.
+
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+     name: nginx-deployment
+     namespace: nginx
+
+spec:
+   replicas: 3
+   selector:
+        matchLabels:
+           app: nginx
+
+   template:
+        metadata:
+            name: nginx-dep-pod
+            labels:
+               app: nginx
+
+        spec:
+          containers:
+          - name: nginx
+            image: nginx:latest
+            ports:
+            - containerPort: 80

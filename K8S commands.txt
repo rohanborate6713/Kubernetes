@@ -78,4 +78,21 @@ kubectl create ns <namespace-name>
 #create pod in specific namespace
 kubectl run <container-name> --image=<image-name> -n <namespace-name>
 kubectl run nginx --image=nginx -n nginx
+--------------------------
+
+#to run manifest file 
+kubectl apply -f <manifest-filename>
+
+#to get into running pod 
+kubectl exec -it pod/<podname> -n <namespace-name> -- <shell-name>    
+
 ------------------------------------------------------------------------------
+#Deployment --> 
+
+To make the pod scalable we use deployment 
+
+#get deployment
+kubectl get deployments -n <namesspace>
+
+#scale the replicas
+kubectl scale deployment/<deploymen-name> -n <namespace> --replicas=5 
