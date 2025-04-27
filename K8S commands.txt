@@ -96,3 +96,24 @@ kubectl get deployments -n <namesspace>
 
 #scale the replicas
 kubectl scale deployment/<deploymen-name> -n <namespace> --replicas=5 
+
+#rolling update command
+ kubectl set image deployment/<deploymeny-name> -n <namespace-name> <image-name>=nginx:1.27.3
+
+ kubectl set image deployment/nginx-deployment -n nginx nginx=nginx:1.27.3
+
+ -----------------------------------------------------------------------------
+ #ReplicaSet -->
+
+ we can use to create specific replicas but not used to do rolling updated features
+
+ #get ReplicaSet
+ kubectl get replicaset -n <namespace-name> 
+
+ #delete 
+ kubectl delete -f replicaset.yml
+------------------------------------------------------------------------------
+#Daemon set --> 
+
+responsbility -> ensure that at least one replica  would run on a each available node
+here we don't need to give replicas number.

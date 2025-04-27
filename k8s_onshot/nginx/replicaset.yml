@@ -1,0 +1,30 @@
+
+# This YAML file is used to define a ReplicaSet in Kubernetes.
+# A ReplicaSet ensures that a specified number of pod replicas are running at any given time.
+# It is used to create a ReplicaSet for the Nginx application in the specified namespace.
+
+kind: ReplicaSet
+apiVersion: apps/v1
+
+metadata:
+  name: nginx-replicaset
+  namespace: nginx
+
+spec:
+   replicas: 3
+   selector:
+        matchLabels:
+           app: nginx
+
+   template:
+        metadata:
+            name: nginx-rep-pod
+            labels:
+               app: nginx
+
+        spec:
+          containers:
+          - name: nginx
+            image: nginx:latest
+            ports:
+            - containerPort: 80

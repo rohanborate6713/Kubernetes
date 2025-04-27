@@ -1,0 +1,28 @@
+
+# It is used to create a DaemonSet for the Nginx application in the specified namespace.
+# A DaemonSet ensures that all (or some) nodes run a copy of a pod.
+
+kind: DaemonSet
+apiVersion: apps/v1
+
+metadata:
+  name: nginx-daemonaset
+  namespace: nginx
+
+spec:
+   selector:
+        matchLabels:
+           app: nginx
+
+   template:
+        metadata:
+            name: nginx-dmn-pod
+            labels:
+               app: nginx
+
+        spec:
+          containers:
+          - name: nginx
+            image: nginx:latest
+            ports:
+            - containerPort: 80
