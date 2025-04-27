@@ -1,2 +1,2 @@
 # Kubernetes
-This repo is used for Kubernetes 
+This repo is used for Kubernetes practise and documentation purpose .
