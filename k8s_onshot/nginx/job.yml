@@ -1,0 +1,25 @@
+# This is a sample job configuration file for Kubernetes.
+# It creates a job that runs a simple command in a busybox container.
+# The job will run a single pod that prints "Hello All..!" and then sleeps for 20 seconds.
+
+
+kind: Job
+apiVersion: batch/v1
+
+metadata:
+     name: demo-job
+     namespace: nginx
+spec:
+  completions: 1
+  parallelism: 1
+  template:
+       metadata:
+           name: demo-job-pod
+           labels:
+              app: batch-task
+       spec:
+        containers:
+        - name: batch-container
+          image: busybox:latest
+          command: ["sh", "-c", "echo Hello All..! && sleep 20"]
+        restartPolicy: Never

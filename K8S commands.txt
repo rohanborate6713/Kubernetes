@@ -117,3 +117,20 @@ kubectl scale deployment/<deploymen-name> -n <namespace> --replicas=5
 
 responsbility -> ensure that at least one replica  would run on a each available node
 here we don't need to give replicas number.
+
+------------------------------------------------------------------------------
+#Job -->
+used to create a specific task with yml file 
+use busybox image to run the shell script
+
+#get Job
+kubectl get job -n <name-space>
+
+kubectl logs pod/<pod-name> -n <name-space>
+------------------------------------------------------------------------------
+#Storage , volumes
+Persistent volume 
+Perssitent volume claim
+storage class
+
+-------------------------------------------------------------------------
