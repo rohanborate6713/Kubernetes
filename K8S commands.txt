@@ -134,3 +134,6 @@ Perssitent volume claim
 storage class
 
 -------------------------------------------------------------------------
+kubectl port forward command
+
+kubectl port forward service/apache-service 8080:80 -address=0.0.0.0 -n apache

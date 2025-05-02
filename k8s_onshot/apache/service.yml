@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+     name: apache-service
+     namespace: apache
+
+spec:
+  selector:
+      app: apahe
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP
+
+
+  #kubectl port forward service/apache-service 8080:80 -n apache
