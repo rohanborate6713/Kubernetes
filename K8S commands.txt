@@ -136,4 +136,42 @@ storage class
 -------------------------------------------------------------------------
 kubectl port forward command
 
-kubectl port forward service/apache-service 8080:80 -address=0.0.0.0 -n apache
+kubectl port-forward service/apache-service 8080:80 -address=0.0.0.0 -n apache
+
+-----------------------------------------------------------------------------
+horizontal pod autoscaler
+
+kubectl apply -f hpa.yml
+kubectl get hpa -n <namespace>
+
+-------------------------------------------------------------------------
+RBAC - Role Based Access Control
+
+#get current user information
+kubectl auth whoami
+
+#to check which permissons user have
+kubectl auth can-i get pods
+
+kubetcl auth can-i get pods -n apache --as=apache-user
+kubectl auth can-i <verb> <resource> [--namespace=<ns>] [--as=<user>]
+
+----------------------------------------------------------------------------
+Helm --> K8s package manager
+
+Installation --> 
+https://helm.sh/docs/intro/install/
+
+commands --> 
+
+helm version --> get version
+helm --> to get all command info
+helm create apache --> create helm
+helm package apache
+
+helm install <release-name> package-name
+
+#upgrade 
+helm upgrade <release-name> <chart-path-or-name> [flags]
+rollback
+helm rollback <release-name> [revision]

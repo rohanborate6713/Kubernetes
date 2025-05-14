@@ -14,4 +14,4 @@ spec:
   type: ClusterIP
 
 
-  #kubectl port forward service/apache-service 8080:80 -n apache
+  #kubectl port forward service/apache-service 8080:80 -address=0.0.0.0 -n apache
